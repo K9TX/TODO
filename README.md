@@ -1,0 +1,1 @@
+This project is a simple TODO application that allows users to manage their tasks efficiently. The app includes Google authentication, enabling users to log in with their Google account for a secure and seamless experience. The application is built using Java with Spring Boot for the backend 
