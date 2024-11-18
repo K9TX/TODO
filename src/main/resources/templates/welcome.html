@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Add</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+  
+     <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+     <form action="#" th:action="@{/add}" th:object="${Todo}" method="post">
+      <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+              <div class="alert alert-success" role="alert" th:if="${msg}" th:utext="${msg}">
+     </div>
+             </div>
+         </div>
+       <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+              <b>   <h1>ToDoList</h1></b>
+                 <hr>
+             </div>
+         </div>
+          <div class="row">
+             <div class="col-md-3 field-label-responsive">
+             
+             <b><label for="name"><h5>Title</h5> </label>:</b>
+            
+                 
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                         
+                      <input type="text" name="title" class="form-control" id="title" placeholder="title" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+
+           <div class="row">
+             <div class="col-md-3 field-label-responsive">
+                 <b><label for="name"><h5>Description</h5></label>:</b>
+             </div>
+             <div class="col-md-6">
+                 <div class="form-group">
+                     <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                      <input type="text" name="des" class="form-control" id="des" placeholder="description" required autofocus> 
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+                 <button type="submit" id="button"  class="btn btn-success"><i class="fa fa-user-plus"></i> Register</button>
+             </div>
+         </div>
+          <a class="btn btn-dark" th:href="@{/list}">view</a>&nbsp;
+          <a th:href="@{/logout}" class="btn btn-dark">logout</a>
+         </form>
+         </div>
+         </div>
+         </div>
+         </div>
+         <iframe src="https://www.rockstargames.com/" title="Rockstar view " width="1920px" height="1080px"></iframe>
+
+         
+
+
+
+ 
+  
+</body>
+</html>
